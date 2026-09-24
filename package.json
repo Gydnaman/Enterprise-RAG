@@ -1,0 +1,11 @@
+{
+  "name": "enterprise-rag-workbench",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "api:generate": "pnpm --dir apps/web api:generate",
+    "api:check": "pnpm --dir apps/web api:check",
+    "typecheck": "pnpm --dir apps/web typecheck",
+    "build": "pnpm --dir apps/web build"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "knowledgeBase": {
+    "id": "fixture-kb-enterprise",
+    "name": "Demo Knowledge Base",
+    "description": "只读演示资料。所有检索与回答均为 DEMO / MOCK。"
+  },
+  "documents": [
+    {
+      "id": "fixture-doc-handbook",
+      "filename": "企业知识工作台手册.md",
+      "mediaType": "text/markdown",
+      "revisionId": "fixture-rev-handbook-v1",
+      "revisionNumber": 1,
+      "sections": [
+        {
+          "id": "fixture-section-handbook-start",
+          "title": "知识库与文档",
+          "order": 1,
+          "pageStart": 1,
+          "pageEnd": 1,
+          "headingPath": ["演示手册", "知识库与文档"],
+          "chunks": [
+            {
+              "id": "fixture-chunk-handbook-kb",
+              "order": 1,
+              "pageStart": 1,
+              "pageEnd": 1,
+              "startOffset": 0,
+              "endOffset": 96,
+              "text": "企业知识库按主题组织资料。上传的文件在 Stage A 只会安全保存为未解析文档，不会自动生成 Section 或 Chunk，也不会进入检索。"
+            },
+            {
+              "id": "fixture-chunk-handbook-run",
+              "order": 2,
+              "pageStart": 1,
+              "pageEnd": 1,
+              "startOffset": 97,
+              "endOffset": 188,
+              "text": "Demo 处理轨迹用于演示 Run 状态和重试界面。轨迹成功只表示模拟流程结束，不代表文件解析、索引或检索已经完成。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fixture-doc-citation",
+      "filename": "证据与引用示例.md",
+      "mediaType": "text/markdown",
+      "revisionId": "fixture-rev-citation-v1",
+      "revisionNumber": 1,
+      "sections": [
+        {
+          "id": "fixture-section-citation-source",
+          "title": "Evidence 与 Citation",
+          "order": 1,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "headingPath": ["演示手册", "Evidence 与 Citation"],
+          "chunks": [
+            {
+              "id": "fixture-chunk-citation-identity",
+              "order": 1,
+              "pageStart": 2,
+              "pageEnd": 2,
+              "startOffset": 0,
+              "endOffset": 86,
+              "text": "每条 Evidence 和 Citation 都引用不可变的 revision_id 与 chunk_id。来源身份用于回查对应的知识库、文档、Section 和 Chunk。"
+            },
+            {
+              "id": "fixture-chunk-citation-empty",
+              "order": 2,
+              "pageStart": 2,
+              "pageEnd": 2,
+              "startOffset": 87,
+              "endOffset": 168,
+              "text": "没有匹配的 Evidence 时，回答应明确说明当前知识库中没有找到可引用的资料，并且不生成 Citation。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

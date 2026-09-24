@@ -1,0 +1,38 @@
+[project]
+name = "rag-workbench-api"
+version = "0.1.0"
+description = "Stage A local enterprise RAG workbench API"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "fastapi==0.141.1",
+  "uvicorn[standard]==0.35.0",
+  "pydantic==2.13.5",
+  "sqlalchemy==2.0.54",
+  "alembic==1.20.0",
+  "langgraph==1.2.12",
+  "psycopg[binary]==3.3.6",
+  "python-multipart==0.0.20",
+]
+
+[dependency-groups]
+dev = ["httpx==0.28.1", "ruff==0.14.0"]
+
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rag_workbench"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/rag_workbench/fixtures/demo_corpus.json" = "rag_workbench/fixtures/demo_corpus.json"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
