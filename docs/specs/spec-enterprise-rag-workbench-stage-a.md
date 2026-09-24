@@ -41,8 +41,8 @@ context:
 - `docs/architecture/architecture-enterprise-rag-workbench-2026-09-23/SOLUTION-DESIGN.md` — 已评审的 API、状态机、上传恢复、UI 流程和栈；实现必须遵循。
 - `docs/architecture/architecture-enterprise-rag-workbench-2026-09-23/ARCHITECTURE-SPINE.md` — 分层、DTO、存储、fixture 与部署不变量。
 - `apps/api/src/rag_workbench/`、`apps/web/src/` — Stage A API 与 UI 实现。
-- `_bmad-output/planning-artifacts/`、`_bmad-output/implementation-artifacts/` — 无既有 PRD、epic 或实现；本 spec 是首个实现基线。
-- 仓库没有 Git 元数据；在现有 `work` 目录实施，不执行分支、提交或推送操作。
+- `docs/specs/` — 规格归档目录；本 spec 是首个实现基线，项目此前没有 PRD 或 epic。
+- 历史说明：最初的实现位于无 Git 元数据的 `work` 目录；此文档后来归档到独立 Git 发布仓库。
 
 ## Tasks & Acceptance
 
@@ -67,7 +67,7 @@ context:
 - Demo Fixture 提供可回溯的 Revision/Section/Chunk/Evidence/Citation；用户上传经过大小、扩展名、签名校验后只安全保存为 `uploaded_unprocessed`，不会解析或参与检索。
 - Run 与事件持久化，SSE 支持恢复；上传失败保留 pending 恢复状态。OpenAPI 是前端类型事实源，幂等键在同一失败操作重试期间持久化。
 - 安装官方 BMAD Method v6.12.0；实施盲审发现的 11 项 patch 已修复并复核，另 1 项 API 类型 drift 结论以当前通过的 `pnpm api:check` 证伪。无 bad_spec/intent_gap/defer 项。
-- 项目没有 Git 元数据，未创建分支、提交或 PR。未运行测试套件，也未启动 API/Web 服务或 Compose；因此浏览器演示路径、SSE 断线场景和 PostgreSQL Compose 尚未手工演练。
+- 历史说明：编写本 spec 时，原始 `work` 实施目录没有 Git 元数据，因此没有在该目录创建分支、提交或 PR；项目后续通过单独的发布仓库完成 Git 提交与推送。未运行测试套件，也未启动 API/Web 服务或 Compose；因此浏览器演示路径、SSE 断线场景和 PostgreSQL Compose 尚未手工演练。
 
 ## Spec Change Log
 
